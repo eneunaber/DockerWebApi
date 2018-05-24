@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  dockerwebapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80:80"
+    secrets:
+      - lceSecrets      
+secrets:
+  lceSecrets:
+    external: true
